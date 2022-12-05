@@ -2,6 +2,8 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import "../../App.css";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar";
+import image from  "../../Assets/img_avatar.png";
+
 function Bookmarks(){
     return(
         <div className="page-layout">
@@ -15,7 +17,7 @@ function Bookmarks(){
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1" >
                                 <div className="avatar-image d-flex justify-content-center">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </div>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
@@ -37,7 +39,7 @@ function Bookmarks(){
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1" >
                                 <div className="avatar-image d-flex justify-content-center">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </div>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
@@ -59,7 +61,7 @@ function Bookmarks(){
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1">
                                 <div className="avatar-image d-flex justify-content-center">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </div>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
@@ -81,7 +83,7 @@ function Bookmarks(){
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1">
                                 <div className="avatar-image d-flex justify-content-center">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </div>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">

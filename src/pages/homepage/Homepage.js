@@ -2,6 +2,7 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import "../../App.css";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar";
+import image from  "../../Assets/img_avatar.png";
 
 function Homepage() {
     return (
@@ -13,7 +14,7 @@ function Homepage() {
                     <div className="feed-input bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1" >
                                 <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </a>
                             </div>
                         <div className="textarea-input w-100">
@@ -37,7 +38,7 @@ function Homepage() {
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
                                 <div className="feed-avatar flex-shrink-1" >
                                     <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                     </a>
                                 </div>
                                 <div className="post-body d-flex flex-column gap-1">
@@ -59,7 +60,7 @@ function Homepage() {
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
                                 <div className="feed-avatar flex-shrink-1" >
                                     <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                     </a>
                                 </div>
                                 <div className="post-body d-flex flex-column gap-1">
@@ -81,7 +82,7 @@ function Homepage() {
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
                                 <div className="feed-avatar flex-shrink-1" >
                                     <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                     </a>
                                 </div>
                                 <div className="post-body d-flex flex-column gap-1">
@@ -103,7 +104,7 @@ function Homepage() {
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
                                 <div className="feed-avatar flex-shrink-1" >
                                     <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                     </a>
                                 </div>
                                 <div className="post-body d-flex flex-column gap-1">

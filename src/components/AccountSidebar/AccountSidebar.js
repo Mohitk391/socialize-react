@@ -1,3 +1,4 @@
+import image from  "../../Assets/img_avatar.png";
 
 function AccountSidebar() {
     return (
@@ -10,7 +11,7 @@ function AccountSidebar() {
                         <div className="user-account d-flex">
                             <div className="feed-avatar" >
                                 <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </a>
                             </div>
                             <div className="user details d-flex justify-content-between w-100 align-items-start">
@@ -25,7 +26,7 @@ function AccountSidebar() {
                         <div className="user-account d-flex">
                             <div className="feed-avatar" >
                                 <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </a>
                             </div>
                             <div className="user details d-flex justify-content-between w-100 align-items-start">
@@ -40,7 +41,7 @@ function AccountSidebar() {
                         <div className="user-account d-flex">
                             <div className="feed-avatar" >
                                 <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </a>
                             </div>
                             <div className="user details d-flex justify-content-between w-100 align-items-start">
@@ -55,7 +56,7 @@ function AccountSidebar() {
                         <div className="user-account d-flex">
                             <div className="feed-avatar" >
                                 <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                    <img src="/img_avatar.png" className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
                                 </a>
                             </div>
                             <div className="user details d-flex justify-content-between w-100 align-items-start">
