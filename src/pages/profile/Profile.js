@@ -3,24 +3,25 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import "../../App.css";
 import image from  "../../Assets/img_avatar.png";
+import { Link } from "react-router-dom";
 
 
 function Profile(){
     return(
         <div className="page-layout">
             <NavBar />
-            <main className="feed-body d-flex justify-content-evenly gap-4 p-3">
+            <main className="feed-body d-flex justify-content-evenly gap-3 p-3">
                 <Sidebar />
                 <div className="content-section d-flex flex-column gap-3 w-50 flex-grow-1">
                     <div className="user-info d-flex flex-column align-items-center gap-2">
-                        <a className="feed-avatar avatar-image" href="/profile.html">
-                            <img src={image} className=" img-fluid rounded-circle" alt="avatar" />
-                        </a>
+                        <div className="feed-avatar avatar-image d-flex justify-content-center" role={"button"} data-bs-toggle="modal" data-bs-target="#profilePictureModal">
+                            <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                        </div>
                         <div className="user-name">
                             <p className="fw-bolder fs-3">User Name</p >
                         </div>
                         <div className="edit-profile">
-                            <button className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Profile</button>
+                            <button className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
                         </div>
                         <div className="user-bio">
                             <p>A little information about user | User fills whatever he/she likes to fill here</p>
@@ -36,11 +37,9 @@ function Profile(){
                         <p className="fs-4 fw-bolder">Your Posts</p>
                         <div className="posts-body d-flex flex-column gap-2">
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1">
-                                    <div className="avatar-image d-flex justify-content-center">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </div>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -58,11 +57,9 @@ function Profile(){
                                 </div>
                             </div>
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1">
-                                    <div className="avatar-image d-flex justify-content-center">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </div>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -80,11 +77,9 @@ function Profile(){
                                 </div>
                             </div>
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1">
-                                    <div className="avatar-image d-flex justify-content-center">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </div>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -102,11 +97,9 @@ function Profile(){
                                 </div>
                             </div>
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1">
-                                    <div className="avatar-image d-flex justify-content-center">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </div>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -129,11 +122,11 @@ function Profile(){
             <AccountSidebar />
             </main>
         
-            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div className="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div className="modal-content">
                     <div className="modal-header">
-                    <h2 className="modal-title fs-5" id="exampleModalLabel">Edit Profile</h2>
+                    <h2 className="modal-title fs-5" id="editProfileModalLabel">Edit Profile</h2>
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
@@ -163,6 +156,20 @@ function Profile(){
                     <button type="button" className="btn btn-primary">Save changes</button>
                     </div>
                 </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="profilePictureModal" tabindex="-1" aria-labelledby="profilePictureModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="profilePictureModalLabel">Profile Picture</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src={image} className=" img-fluid" alt="avatar" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
