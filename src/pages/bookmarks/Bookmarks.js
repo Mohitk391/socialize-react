@@ -3,12 +3,13 @@ import "../../App.css";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar";
 import image from  "../../Assets/img_avatar.png";
+import { Link } from "react-router-dom";
 
 function Bookmarks(){
     return(
         <div className="page-layout">
         <NavBar />
-        <main className="feed-body d-flex justify-content-evenly gap-4 p-3">
+        <main className="feed-body d-flex justify-content-evenly gap-3 p-3">
             <Sidebar />
             <div className="content-section d-flex flex-column gap-3 w-50 flex-grow-1">
                 <div className="feed-posts-display">
@@ -16,9 +17,9 @@ function Bookmarks(){
                     <div className="posts-body d-flex flex-column gap-2">
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1" >
-                                <div className="avatar-image d-flex justify-content-center">
-                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                </div>
+                                <Link className="avatar-image d-flex justify-content-center" to="/profile">
+                                    <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
                                 <div className="post-user-title d-flex gap-2">
@@ -38,9 +39,9 @@ function Bookmarks(){
                         </div>
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1" >
-                                <div className="avatar-image d-flex justify-content-center">
-                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                </div>
+                                <Link className="avatar-image d-flex justify-content-center" to="/profile">
+                                    <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
                                 <div className="post-user-title d-flex gap-2">
@@ -60,9 +61,9 @@ function Bookmarks(){
                         </div>
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1">
-                                <div className="avatar-image d-flex justify-content-center">
-                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                </div>
+                                <Link className="avatar-image d-flex justify-content-center" to="/profile">
+                                    <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
                                 <div className="post-user-title d-flex gap-2">
@@ -82,9 +83,9 @@ function Bookmarks(){
                         </div>
                         <div className="post bg-white p-3 d-flex gap-2 rounded">
                             <div className="feed-avatar flex-shrink-1">
-                                <div className="avatar-image d-flex justify-content-center">
-                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                </div>
+                                <Link className="avatar-image d-flex justify-content-center" to="/profile">
+                                    <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                             </div>
                             <div className="post-body d-flex flex-column gap-1">
                                 <div className="post-user-title d-flex gap-2">

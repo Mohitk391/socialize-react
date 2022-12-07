@@ -3,20 +3,19 @@ import "../../App.css";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar";
 import image from  "../../Assets/img_avatar.png";
+import { Link } from "react-router-dom";
 
 function Homepage() {
     return (
         <div className="page-layout">
             <NavBar />
-            <main className="feed-body d-flex justify-content-evenly gap-4 p-3">
+            <main className="feed-body d-flex justify-content-evenly gap-3 p-3">
                 <Sidebar />
                 <div className="content-section d-flex flex-column gap-3 w-50 flex-grow-1">
                     <div className="feed-input bg-white p-3 d-flex gap-2 rounded">
-                            <div className="feed-avatar flex-shrink-1" >
-                                <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                </a>
-                            </div>
+                        <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                            <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                        </Link>
                         <div className="textarea-input w-100">
                             <div className="textarea input-group mb-2">
                                 <textarea className="form-control" type="text" placeholder="Write something interesting..." rows="4" ></textarea>
@@ -36,11 +35,9 @@ function Homepage() {
                         <p className="fs-4 fw-bolder text-start">Latest Posts</p>
                         <div className="posts-body d-flex flex-column gap-2">
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1" >
-                                    <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </a>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -51,18 +48,16 @@ function Homepage() {
                                         Have a nice day!!!
                                     </div>
                                     <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
+                                        <i className="bi bi-heart"></i>
+                                        <i className="bi bi-chat-left"></i>
+                                        <i className="bi bi-bookmark"></i>
                                     </div>
                                 </div>
                             </div>
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1" >
-                                    <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </a>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -73,18 +68,16 @@ function Homepage() {
                                         Have a nice day!!!
                                     </div>
                                     <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
+                                        <i className="bi bi-heart"></i>
+                                        <i className="bi bi-chat-left"></i>
+                                        <i className="bi bi-bookmark"></i>
                                     </div>
                                 </div>
                             </div>
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1" >
-                                    <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </a>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -95,18 +88,16 @@ function Homepage() {
                                         Have a nice day!!!
                                     </div>
                                     <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
+                                        <i className="bi bi-heart"></i>
+                                        <i className="bi bi-chat-left"></i>
+                                        <i className="bi bi-bookmark"></i>
                                     </div>
                                 </div>
                             </div>
                             <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <div className="feed-avatar flex-shrink-1" >
-                                    <a className="avatar-image d-flex justify-content-center" href="/profile.html">
-                                        <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    </a>
-                                </div>
+                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
+                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
+                                </Link>
                                 <div className="post-body d-flex flex-column gap-1">
                                     <div className="post-user-title d-flex gap-2">
                                         <span className="fw-bolder">User Name</span>
@@ -117,9 +108,9 @@ function Homepage() {
                                         Have a nice day!!!
                                     </div>
                                     <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
+                                        <i className="bi bi-heart"></i>
+                                        <i className="bi bi-chat-left"></i>
+                                        <i className="bi bi-bookmark"></i>
                                     </div>
                                 </div>
                             </div>
