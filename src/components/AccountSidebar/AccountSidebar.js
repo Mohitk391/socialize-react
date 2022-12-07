@@ -4,9 +4,8 @@ import image from  "../../Assets/img_avatar.png";
 function AccountSidebar() {
     return (
         <div className="accounts-suggestion d-flex flex-column align-self-start flex-grow-0 gap-2 bg-white px-3 py-2 rounded" >
-                    <div className="accounts-title d-flex justify-content-between align-items-center gap-5 text-nowrap">
+                    <div className="accounts-title d-flex justify-content-center text-nowrap">
                         <span className="fw-bolder">Suggested Accounts</span>
-                        <button className="btn text-primary px-0">Show More</button>
                     </div>
                     <div className="suggested-accounts d-flex flex-column gap-2">
                         <div className="user-account d-flex">
@@ -65,6 +64,9 @@ function AccountSidebar() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                        <button className="btn btn-outline-primary w-100">Show More</button>
                     </div>
                 </div>
     );
