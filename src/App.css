@@ -1,13 +1,13 @@
-.feed-body{
-  background-color: rgb(243, 242, 242)
-}
-
 .sidebar{
   width: 20%;
 }
 
 .feed-avatar{
-  width:20%;
+  flex-basis: 20%;
+}
+
+.post-body{
+  flex-basis: 80%;
 }
 
 .feed-avatar-modal{
