@@ -26,9 +26,6 @@ function Profile(){
                         <div className="user-bio">
                             <p>A little information about user | User fills whatever he/she likes to fill here</p>
                         </div>
-                        <div className="user-site">
-                            <a className="text-decoration-none text-danger" href="/">username@google.com</a>
-                        </div>
                         <div className="connection-details bg-white rounded py-3 px-4">
                             <a className="text-decoration-none text-black" href="/"><span><b>10</b> Connections</span></a>
                         </div>
@@ -122,7 +119,7 @@ function Profile(){
             <AccountSidebar />
             </main>
         
-            <div className="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+            <div className="modal fade" id="editProfileModal" tabIndex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div className="modal-content">
                     <div className="modal-header">
@@ -159,14 +156,14 @@ function Profile(){
                 </div>
             </div>
 
-            <div class="modal fade" id="profilePictureModal" tabindex="-1" aria-labelledby="profilePictureModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="profilePictureModalLabel">Profile Picture</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div className="modal fade" id="profilePictureModal" tabIndex="-1" aria-labelledby="profilePictureModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h1 className="modal-title fs-5" id="profilePictureModalLabel">Profile Picture</h1>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div className="modal-body">
                             <img src={image} className=" img-fluid" alt="avatar" />
                         </div>
                     </div>

@@ -5,14 +5,23 @@ import { Signup } from './pages/authentication/Signup';
 import { Bookmarks } from './pages/bookmarks/Bookmarks';
 import { Homepage } from './pages/homepage/Homepage';
 import { Profile } from './pages/profile/Profile';
+import { RequiresAuth } from "./utils/RequiresAuth";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/bookmarks" element={<Bookmarks />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/bookmarks" element={
+          <RequiresAuth>
+            <Bookmarks />
+            </RequiresAuth>
+          } />
+        <Route path="/profile" element={
+          <RequiresAuth>
+            <Profile />
+            </RequiresAuth>
+          } />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
