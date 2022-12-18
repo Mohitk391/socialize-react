@@ -10,6 +10,26 @@ function Post(props) {
         postDispatch({type:"UPDATE_POST", value: post});
     }
 
+    const timeDifference = (postTime) => {
+        const now = Date.now();
+        const diff = now - postTime ; 
+        if(diff > 2592000000){
+            return ` ${Math.floor(diff/2592000000)} months`;
+        }
+        else if(diff > 86400000){
+            return ` ${Math.floor(diff/86400000)} days`;
+        }
+        else if( diff > 3600000){
+            return ` ${Math.floor(diff/3600000)} hrs`;
+        }
+        else if(diff > 60000){
+            return ` ${Math.floor(diff/60000)} mins`;
+        }
+        else {
+            return ` ${Math.floor(diff/1000)} secs`;
+        }
+    }
+
 
     return (
         <div className="post bg-white p-3 d-flex gap-2 rounded">
@@ -19,7 +39,7 @@ function Post(props) {
             <div className="post-body d-flex flex-column gap-1">
                 <div className="post-user-title d-flex gap-2">
                     <span className="fw-bolder">{post.userName}</span>
-                    <small className="small-text align-self-end" >10hr</small>
+                    <small className="small-text align-self-center" >{timeDifference(post.date_created)} ago</small>
                 </div>
                 <div className="post-content d-flex flex-column">
                     {post.text}

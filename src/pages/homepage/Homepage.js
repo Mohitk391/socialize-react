@@ -11,19 +11,22 @@ import { Post } from "../../components/Post/Post";
 
 function Homepage() {
     const { postState: {posts}, postDispatch} = usePost();
-    const {userState} = useUser();
+    const {userState: {user}} = useUser();
     const [selectedImage, setSelectedImage] = useState(null);
-    const [post, setPost] = useState({userName: userState.user, userAvatar: image, text: "", likes: 0, imageSource: null, comments: [], bookmarked: false});
+    const [post, setPost] = useState({userName: null  , userAvatar: image, text: "", likes: 0, imageSource: null, comments: [], bookmarked: false, date_created: Date.now()});
     const navigate = useNavigate();
 
     
 
     const addPost = (currentPost)=>{
-        if(userState.user === null){
+        if(user === null){
             navigate("/login");
         }
-        if(currentPost.text.trim().length || currentPost.imageSource !== null){
+        else if(currentPost.text.trim().length || currentPost.imageSource !== null){
+            setPost({...post, userName: user.name, date_created: Date.now()});
             postDispatch({type: "ADD_POST", value: currentPost});
+            setPost({...post, text: "", imageSource: null});
+            setSelectedImage(null);
         }
         
     }
@@ -40,7 +43,7 @@ function Homepage() {
                         </Link>
                         <div className="textarea-input w-100">
                             <div className="textarea input-group mb-2">
-                                <textarea className="form-control" type="text" placeholder="Write something interesting..." rows="4" onChange={(e)=>{setPost({...post, text: e.target.value})}}></textarea>
+                                <textarea className="form-control" type="text"value={post.text} placeholder="Write something interesting..." rows="4" onChange={(e)=>{setPost({...post, text: e.target.value})}}></textarea>
                             </div>
                             {selectedImage && (
                                 <div className="d-flex justify-content-center align-items-center gap-3">

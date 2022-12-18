@@ -9,7 +9,7 @@ function Signup(){
 
     const signup = async (e) => {
         e.preventDefault();
-        if((user.name.trim()).length === 0 || (user.mobile.trim()).length===0 || (user.email.trim()).length ===0 || (user.password.trim()).length ===0){
+        if((user.name.trim()).length === 0 || (user.mobile.trim()).length===0 || (user.password.trim()).length ===0){
             if((user.name.trim()).length === 0)
                 setUser({...user, nameError: true});
             if((user.mobile.trim()).length === 0)
@@ -18,8 +18,8 @@ function Signup(){
                 setUser({...user, passwordError: true});
         }
         else{
-            userDispatch({type: "SET_USER", value: "Mohit_Patel123"});
-            localStorage.setItem("token", "Mohit_Patel123");
+            userDispatch({type: "SET_USER", value: user});
+            localStorage.setItem("token", JSON.stringify(user));
             navigate("/");
         }
         
@@ -45,24 +45,24 @@ function Signup(){
                         <div className="row">
                             <div className="col input-field form-floating d-flex flex-column">
                                 <input className={`${user.nameError ? "border-danger" : ""} form-control`}  type="text" id="name" placeholder="Full Name" onChange={(e)=>setUser({...user, name: e.target.value, nameError: false})}/>
-                                <label for="name">Full Name</label>
+                                <label for="name" className="ps-4">Full Name*</label>
                             </div>
                             <div className="col input-field form-floating d-flex flex-column">
                                 <input className={`${user.mobileError ? "border-danger" : ""} form-control`}  type="number" id="mobile" placeholder="Mobile Number" onChange={(e)=>setUser({...user, mobile: e.target.value, mobileError: false})}/>
-                                <label for="mobile">Mobile</label>
+                                <label for="mobile" className="ps-4">Mobile*</label>
                             </div>
                         </div>
                         <div className="input-field form-floating d-flex flex-column w-100">
                             <input className={`${user.emailError ? "border-danger" : ""} form-control`}  type="email" id="email" placeholder="Email Address" onChange={(e)=>setUser({...user, email: e.target.value, emailError: false})}/>
-                            <label htmlFor="email">Email Address    </label>
+                            <label htmlFor="email">Email Address</label>
                         </div>
                         <div className="input-field form-floating d-flex flex-column w-100">
                             <input className={`${user.passwordError ? "border-danger" : ""} form-control`}  type="password" id="password" placeholder="Password"onChange={(e)=>setUser({...user, password: e.target.value, passwordError: false})}/>
-                            <label htmlFor="password">Password</label>
+                            <label htmlFor="password">Password*</label>
                         </div>
                         <div className="input-field form-floating d-flex flex-column w-100">
                             <input className={`${user.confirmPasswordError ? "border-danger" : ""} form-control`}  type="password" id="confirmPassword" placeholder="Confirm Password" onChange={(e)=>checkConfirmPassword(e)}/>
-                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <label htmlFor="confirmPassword">Confirm Password*</label>
                         </div>
                         <div className="signup-btn w-100">
                             <button className="login-btn btn btn-primary w-100">Create New Account</button>
