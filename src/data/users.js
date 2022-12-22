@@ -2,14 +2,27 @@ import { v4 as uuid } from "uuid";
 
 export const users = [
     {
-        id: uuid(),
+        id: 1,
         name: "Mohit Patel",
         mobile: 9876543210,
         email: "mohitpatel@gmail.com",
         password: "mohit123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
         bio: "Hello, Mohit Patel here!!! Nice to meet you.",
-        connections: [],
+        connections: [
+            {
+                id: 6,
+                name: "Mohit Patel 6",
+            },
+            {
+                id: 5,
+                name: "Mohit Patel 5",
+            },
+            {
+                id: 2,
+                name: "Mohit Patel 2",
+            }
+        ],
         posts: [
             {
                 id: uuid(),
@@ -47,14 +60,31 @@ export const users = [
         ],
     },
     {
-        id: uuid(),
+        id: 2,
         name: "Mohit Patel 2",
         mobile: 9876543210,
         email: "mohitpatel@gmail.com",
         password: "mohit123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
         bio: "Hello, Mohit Patel here!!! Nice to meet you | This is my second account",
-        connections: [],
+        connections: [
+            {
+                id: 6,
+                name: "Mohit Patel 6",
+            },
+            {
+                id: 5,
+                name: "Mohit Patel 5",
+            },
+            {
+                id: 1,
+                name: "Mohit Patel",
+            },
+            {
+                id: 3,
+                name: "Mohit Patel 3",
+            }
+        ],
         posts: [
             {
                 id: uuid(),
@@ -70,8 +100,24 @@ export const users = [
         ],
     },
     {
-        id: uuid(),
-        name: "Mohit Patel",
+        id: 3,
+        name: "Mohit Patel 3",
+        mobile: 9876543210,
+        email: "mohitpatel@gmail.com",
+        password: "mohit123",
+        profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
+        bio: "Hello, Mohit Patel here!!! Nice to meet you.",
+        connections: [
+            {
+                id: 2,
+                name: "Mohit Patel 2",
+            }
+        ],
+        posts: [],
+    },
+    {
+        id: 4,
+        name: "Mohit Patel 4",
         mobile: 9876543210,
         email: "mohitpatel@gmail.com",
         password: "mohit123",
@@ -81,36 +127,51 @@ export const users = [
         posts: [],
     },
     {
-        id: uuid(),
-        name: "Mohit Patel",
+        id: 5,
+        name: "Mohit Patel 5",
         mobile: 9876543210,
         email: "mohitpatel@gmail.com",
         password: "mohit123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
         bio: "Hello, Mohit Patel here!!! Nice to meet you.",
-        connections: [],
+        connections: [
+            {
+                id: 0,
+                name: "Mohit Patel 123",
+            },
+            {
+                id: 1,
+                name: "Mohit Patel 1",
+            },
+            {
+                id: 2,
+                name: "Mohit Patel 2",
+            }
+        ],
         posts: [],
     },
     {
-        id: uuid(),
-        name: "Mohit Patel",
+        id: 6,
+        name: "Mohit Patel 6",
         mobile: 9876543210,
         email: "mohitpatel@gmail.com",
         password: "mohit123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
         bio: "Hello, Mohit Patel here!!! Nice to meet you.",
-        connections: [],
-        posts: [],
-    },
-    {
-        id: uuid(),
-        name: "Mohit Patel",
-        mobile: 9876543210,
-        email: "mohitpatel@gmail.com",
-        password: "mohit123",
-        profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
-        bio: "Hello, Mohit Patel here!!! Nice to meet you.",
-        connections: [],
+        connections: [
+            {
+                id: 0,
+                name: "Mohit Patel 123",
+            },
+            {
+                id: 1,
+                name: "Mohit Patel 1",
+            },
+            {
+                id: 2,
+                name: "Mohit Patel 2",
+            }
+        ],
         posts: [],
     },
 ]

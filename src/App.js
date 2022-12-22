@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { AccountsSuggestion } from './pages/accounts-suggestion/AccountsSuggestion';
 import { Login } from './pages/authentication/Login';
 import { Signup } from './pages/authentication/Signup';
 import { Bookmarks } from './pages/bookmarks/Bookmarks';
@@ -15,6 +16,11 @@ function App() {
         <Route path="/bookmarks" element={
           <RequiresAuth>
             <Bookmarks />
+            </RequiresAuth>
+          } />
+        <Route path="/accounts" element={
+          <RequiresAuth>
+            <AccountsSuggestion />
             </RequiresAuth>
           } />
         <Route path="/profile" element={

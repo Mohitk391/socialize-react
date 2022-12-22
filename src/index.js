@@ -6,15 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import { UserProvider } from "../src/contexts/UserContext";
 import { BrowserRouter } from 'react-router-dom';
 import { PostProvider } from './contexts/PostContext';
+import { AccountProvider } from './contexts/AccountContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <PostProvider>
-          <App />
-        </PostProvider>
+        <AccountProvider>
+          <PostProvider>
+            <App />
+          </PostProvider>
+        </AccountProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>
