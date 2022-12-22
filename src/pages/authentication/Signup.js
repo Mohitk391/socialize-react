@@ -18,8 +18,8 @@ function Signup(){
                 setUser({...user, passwordError: true});
         }
         else{
-            userDispatch({type: "SET_USER", value: user});
-            localStorage.setItem("token", JSON.stringify(user));
+            userDispatch({type: "SET_USER", value: {id: 0, name: user.name, mobile: user.mobile, email: user.email, connections: [], posts: [], profilePicture: "https://www.w3schools.com/howto/img_avatar.png", bio: "A little information about user | User fills whatever he/she likes to fill here"}});
+            localStorage.setItem("token", JSON.stringify({name: user.name, mobile: user.mobile, email: user.email}));
             navigate("/");
         }
         

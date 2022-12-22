@@ -4,6 +4,8 @@ const UserReducer = (userState, action) => {
             return {...userState, user: action.value, isUserLoggedIn: true};
         case "UNSET_USER":
             return {...userState, user: null, isUserLoggedIn: false};
+        case "UPDATE_USER":
+            return {...userState, user: action.value};
         default: 
             return userState;
     }

@@ -3,10 +3,22 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import "../../App.css";
 import image from  "../../Assets/img_avatar.png";
+import { usePost } from "../../contexts/PostContext";
+import { useUser } from "../../contexts/UserContext";
+import { Post } from "../../components/Post/Post";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 function Profile(){
+    const { postState: {posts}} = usePost();
+    const {userState: {user}, userDispatch} = useUser();
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [userDetails, setUserDetails] = useState({name: user.name, bio: user.bio, email: user.email, profilePicture: user.profilePicture,connections: user.connections, posts: user.posts });
+    const updateUserDetails = () =>{
+        userDispatch({type: "UPDATE_USER", value: userDetails});
+    }
+
     return(
         <div className="page-layout">
             <NavBar />
@@ -15,104 +27,29 @@ function Profile(){
                 <div className="content-section d-flex flex-column gap-3 w-50 flex-grow-1">
                     <div className="user-info d-flex flex-column align-items-center gap-2">
                         <div className="feed-avatar avatar-image d-flex justify-content-center" role={"button"} data-bs-toggle="modal" data-bs-target="#profilePictureModal">
-                            <img src={image} className=" img-fluid rounded-circle w-75" alt="avatar" />
+                            <img src={userDetails.profilePicture} className=" img-fluid rounded-circle w-25" alt="avatar" />
                         </div>
                         <div className="user-name">
-                            <p className="fw-bolder fs-3">User Name</p >
+                            <p className="fw-bolder fs-3">{userDetails.name}</p >
                         </div>
                         <div className="edit-profile">
                             <button className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
                         </div>
                         <div className="user-bio">
-                            <p>A little information about user | User fills whatever he/she likes to fill here</p>
+                            <p>{userDetails.bio}</p>
                         </div>
                         <div className="connection-details bg-white rounded py-3 px-4">
-                            <a className="text-decoration-none text-black" href="/"><span><b>10</b> Connections</span></a>
+                            <Link className="text-decoration-none text-black" to="/profile"><span><b>{user.connections.length}</b> Connections</span></Link>
                         </div>
                     </div>
                     <div className="feed-posts-display">
                         <p className="fs-4 fw-bolder">Your Posts</p>
                         <div className="posts-body d-flex flex-column gap-2">
-                            <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
-                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
-                                </Link>
-                                <div className="post-body d-flex flex-column gap-1">
-                                    <div className="post-user-title d-flex gap-2">
-                                        <span className="fw-bolder">User Name</span>
-                                        <small className="small-text align-self-end" >10hr</small>
-                                    </div>
-                                    <div className="post-content">
-                                        This is a demo post containing demo content. Please check out other posts as well.
-                                        Have a nice day!!!
-                                    </div>
-                                    <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
-                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
-                                </Link>
-                                <div className="post-body d-flex flex-column gap-1">
-                                    <div className="post-user-title d-flex gap-2">
-                                        <span className="fw-bolder">User Name</span>
-                                        <small className="small-text align-self-end" >10hr</small>
-                                    </div>
-                                    <div className="post-content">
-                                        This is a demo post containing demo content. Please check out other posts as well.
-                                        Have a nice day!!!
-                                    </div>
-                                    <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
-                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
-                                </Link>
-                                <div className="post-body d-flex flex-column gap-1">
-                                    <div className="post-user-title d-flex gap-2">
-                                        <span className="fw-bolder">User Name</span>
-                                        <small className="small-text align-self-end" >10hr</small>
-                                    </div>
-                                    <div className="post-content">
-                                        This is a demo post containing demo content. Please check out other posts as well.
-                                        Have a nice day!!!
-                                    </div>
-                                    <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="post bg-white p-3 d-flex gap-2 rounded">
-                                <Link className="avatar-image feed-avatar d-flex justify-content-center align-items-start" to="/profile">
-                                    <img src={image} className="img-fluid rounded-circle w-75" alt="avatar" />
-                                </Link>
-                                <div className="post-body d-flex flex-column gap-1">
-                                    <div className="post-user-title d-flex gap-2">
-                                        <span className="fw-bolder">User Name</span>
-                                        <small className="small-text align-self-end" >10hr</small>
-                                    </div>
-                                    <div className="post-content">
-                                        This is a demo post containing demo content. Please check out other posts as well.
-                                        Have a nice day!!!
-                                    </div>
-                                    <div className="action-icons d-flex justify-content-between">
-                                        <div className="icon heart-icon"><i className="bi bi-heart"></i></div>
-                                        <div className="icon comment-icon"><i className="bi bi-chat-left"></i></div>
-                                        <div className="icon bookmark-icon"><i className="bi bi-bookmark"></i></div>
-                                    </div>
-                                </div>
-                            </div>
+                            {posts.map(post=>{
+                                return (
+                                    <Post post={post} />
+                                )
+                            })}
                         </div>
                     </div>
                 </div>
@@ -130,27 +67,29 @@ function Profile(){
                         <div className="d-flex flex-column">
                             <div className="feed-avatar-modal align-self-center">
                                 <label htmlFor="image-input" role="button"  className="avatar-image d-flex justify-content-center">
-                                    <img src={image} className=" img-fluid rounded-circle w-50" alt="avatar" />
-                                    <input  className="image-input" type="file" id="image-input" accept="image/x-png,image/gif,image/jpeg" /> 
+                                    <img src={selectedImage ? URL.createObjectURL(selectedImage) : image} className=" img-fluid rounded-circle w-50" alt="avatar" />
+                                    <input  className="image-input" type="file" id="image-input" accept="image/x-png,image/gif,image/jpeg" onChange={(event) => {
+                                        setSelectedImage(event.target.files[0]);
+                                        setUserDetails({...userDetails, profilePicture: URL.createObjectURL(event.target.files[0])});
+                                    }}/> 
                                 </label>
                             </div>
                         </div>
                         <div className="mb-2">
                             <label htmlFor="exampleFormControlInput1" className="form-label">Name</label>
-                            <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="User Name" />
+                            <input type="text" className="form-control" id="exampleFormControlInput1" value={userDetails.name} onChange={event => setUserDetails({...userDetails, name: event.target.value})}/>
                         </div>
                         <div className="mb-2">
                             <label htmlFor="exampleFormControlTextarea1" className="form-label">Bio</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" onChange= { event => setUserDetails({...userDetails, bio: event.target.value})} value={userDetails.bio}></textarea>
                         </div>
                         <div className="mb-2">
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Website</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                        <label htmlFor="exampleFormControlInput1" className="form-label">Email</label>
+                        <input type="email" className="form-control" id="exampleFormControlInput1" value={userDetails.email} onChange= { event => setUserDetails({...userDetails, email: event.target.value})}/>
                         </div>
                     </div>
                     <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary">Save changes</button>
+                    <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={()=>updateUserDetails()}>Save changes</button>
                     </div>
                 </div>
                 </div>

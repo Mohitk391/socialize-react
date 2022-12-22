@@ -19,8 +19,17 @@ function Login(){
         }
         else{
             if(user.mobile=== "9876543210" && user.password==="mohit123"){
-                userDispatch({type: "SET_USER", value: "Mohit_Patel123"});
-                localStorage.setItem("token", "Mohit_Patel123");
+                userDispatch({type: "SET_USER", value: {id: 0, name: "Mohit 123", mobile: 9876543210, email: "mohit123@gmail.com", connections: [
+                    {
+                        id: 6,
+                        name: "Mohit Patel 6",
+                    },
+                    {
+                        id: 5,
+                        name: "Mohit Patel 5",
+                    }
+                ], posts: [], profilePicture: "https://www.w3schools.com/howto/img_avatar.png", bio: "A little information about user | User fills whatever he/she likes to fill here"}});
+                localStorage.setItem("token", JSON.stringify({name: "Mohit 123", mobile: 9876543210, email: "mohit123@gmail.com"}));
                 const from = location.state?.from || '/';
                 navigate(from, { replace: true });
             }
@@ -36,7 +45,7 @@ function Login(){
     return (
         <div className="authentication-page-layout">
             <div className="d-flex justify-content-center align-items-center  flex-column h-50 w-auto gap-3">
-            <div className="site-title fs-1 fw-bold fst-italic"><Link className="text-decoration-none text-white" to="/">SOCIALIZE</Link></div>
+            <div className="site-title fs-1 fw-bold fst-italic"><div className="text-white">SOCIALIZE</div></div>
             <form className="login-body d-flex flex-column align-items-center bg-white px-5 shadow rounded-4" onSubmit={(e)=>login(e)}>
                 <div className="login-title fs-4 fw-bold pt-2 px-2">Login</div>
                 <div className="body d-flex flex-column align-items-center gap-3 p-4">
