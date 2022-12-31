@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar"
 import { NavBar } from "../../components/NavBar/NavBar"
 import { Sidebar } from "../../components/Sidebar/Sidebar"
