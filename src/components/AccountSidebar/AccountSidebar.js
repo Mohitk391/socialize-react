@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAccount } from "../../contexts/AccountContext";
 import { useUser } from "../../contexts/UserContext";
 
 function AccountSidebar() {
     const navigate = useNavigate();
-    const {accountState: {accounts}, accountDispatch} = useAccount(); 
+    const {accountState: {accounts}} = useAccount(); 
     const {userState: {user}, userDispatch} = useUser();
 
     const isUserConnected = (account)=> {

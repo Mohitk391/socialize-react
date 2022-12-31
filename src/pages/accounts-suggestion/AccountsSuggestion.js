@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar"
 import { NavBar } from "../../components/NavBar/NavBar"
 import { Sidebar } from "../../components/Sidebar/Sidebar"
@@ -9,7 +8,6 @@ import { useUser } from "../../contexts/UserContext";
 function AccountsSuggestion() {
     const {accountState: {accounts}, accountDispatch} = useAccount(); 
     const {userState: {user}, userDispatch} = useUser();
-    const params = useParams();
     console.log(user);
 
     const isUserConnected = (account)=> {
