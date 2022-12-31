@@ -12,15 +12,15 @@ export const users = [
         connections: [
             {
                 id: 6,
-                name: "Mohit Patel 6",
+                name: "Meeta Singh Chauhan",
             },
             {
                 id: 5,
-                name: "Mohit Patel 5",
+                name: "K Siddharth",
             },
             {
                 id: 2,
-                name: "Mohit Patel 2",
+                name: "Rohit Sharma",
             }
         ],
         posts: [
@@ -61,20 +61,20 @@ export const users = [
     },
     {
         id: 2,
-        name: "Mohit Patel 2",
-        mobile: 9876543210,
-        email: "mohitpatel@gmail.com",
-        password: "mohit123",
+        name: "Rohit Sharma",
+        mobile: 9546891950,
+        email: "rohitsharma@gmail.com",
+        password: "rohit123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
-        bio: "Hello, Mohit Patel here!!! Nice to meet you | This is my second account",
+        bio: "Hello, Rohit Sharma here!!! Nice to meet you | This is my second account",
         connections: [
             {
                 id: 6,
-                name: "Mohit Patel 6",
+                name: "Meeta Singh Chauhan",
             },
             {
                 id: 5,
-                name: "Mohit Patel 5",
+                name: "K Siddharth",
             },
             {
                 id: 1,
@@ -82,13 +82,13 @@ export const users = [
             },
             {
                 id: 3,
-                name: "Mohit Patel 3",
+                name: "Devashish Verma",
             }
         ],
         posts: [
             {
                 id: uuid(),
-                userName: "Mohit Patel 2",
+                userName: "Rohit Sharma",
                 userAvatar: "https://www.w3schools.com/howto/img_avatar.png",
                 text: "Be proud, be loyal!!!",
                 imageSource: null,
@@ -101,39 +101,39 @@ export const users = [
     },
     {
         id: 3,
-        name: "Mohit Patel 3",
-        mobile: 9876543210,
-        email: "mohitpatel@gmail.com",
-        password: "mohit123",
+        name: "Devashish Verma",
+        mobile: 8887566620,
+        email: "devashishverma@gmail.com",
+        password: "deva123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
-        bio: "Hello, Mohit Patel here!!! Nice to meet you.",
+        bio: "Hello, Devashish here!!! Nice to meet you.",
         connections: [
             {
                 id: 2,
-                name: "Mohit Patel 2",
+                name: "Rohit Sharma",
             }
         ],
         posts: [],
     },
     {
         id: 4,
-        name: "Mohit Patel 4",
-        mobile: 9876543210,
-        email: "mohitpatel@gmail.com",
-        password: "mohit123",
+        name: "Pallavi Patle",
+        mobile: 7354698500,
+        email: "patlepallavi@gmail.com",
+        password: "pallavip123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
-        bio: "Hello, Mohit Patel here!!! Nice to meet you.",
+        bio: "Hello, Pallavi here!!! Nice to meet you.",
         connections: [],
         posts: [],
     },
     {
         id: 5,
-        name: "Mohit Patel 5",
-        mobile: 9876543210,
-        email: "mohitpatel@gmail.com",
-        password: "mohit123",
+        name: "K Siddharth",
+        mobile: 8106874532,
+        email: "ksid@gmail.com",
+        password: "ksid123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
-        bio: "Hello, Mohit Patel here!!! Nice to meet you.",
+        bio: "Hello, Siddharth here!!! Nice to meet you.",
         connections: [
             {
                 id: 0,
@@ -141,23 +141,23 @@ export const users = [
             },
             {
                 id: 1,
-                name: "Mohit Patel 1",
+                name: "Mohit Patel",
             },
             {
                 id: 2,
-                name: "Mohit Patel 2",
+                name: "Rohit Sharma",
             }
         ],
         posts: [],
     },
     {
         id: 6,
-        name: "Mohit Patel 6",
-        mobile: 9876543210,
-        email: "mohitpatel@gmail.com",
-        password: "mohit123",
+        name: "Meeta Singh Chauhan",
+        mobile: 7000656989,
+        email: "meetasinghchauhan@gmail.com",
+        password: "meetasc123",
         profilePictureSource: "https://www.w3schools.com/howto/img_avatar.png",
-        bio: "Hello, Mohit Patel here!!! Nice to meet you.",
+        bio: "Hello, Meeta here!!! Nice to meet you.",
         connections: [
             {
                 id: 0,
@@ -165,11 +165,11 @@ export const users = [
             },
             {
                 id: 1,
-                name: "Mohit Patel 1",
+                name: "Mohit Patel",
             },
             {
                 id: 2,
-                name: "Mohit Patel 2",
+                name: "Rohit Sharma",
             }
         ],
         posts: [],

@@ -40,7 +40,7 @@ function AccountsSuggestion() {
                     <div className="accounts-display">
                         <ul className="posts-body d-flex flex-column position-static gap-2">
                             {
-                            accounts.map(account=>{ return (
+                            accounts.sort((account)=>isUserConnected(account) ? -1 : 1).map(account=>{ return (
                             <li className="post bg-white p-3 d-flex gap-2 rounded">
                                 <div className="feed-avatar">
                                     <Link className="avatar-image d-flex justify-content-center" to="/profile">
