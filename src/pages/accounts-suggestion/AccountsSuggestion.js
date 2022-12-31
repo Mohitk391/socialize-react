@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
 import { AccountSidebar } from "../../components/AccountSidebar/AccountSidebar"
 import { NavBar } from "../../components/NavBar/NavBar"
